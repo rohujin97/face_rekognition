@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        table.type03 {
+            border-collapse: collapse;
+            text-align: left;
+            line-height: 1.5;
+            border-top: 1px solid #ccc;
+            border-left: 3px solid #369;
+          margin : 20px 10px;
+        }
+        table.type03 th {
+            width: 147px;
+            padding: 10px;
+            font-weight: bold;
+            vertical-align: top;
+            color: #153d73;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        
+        }
+        table.type03 td {
+            width: 349px;
+            padding: 10px;
+            vertical-align: top;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #153d73">&nbsp출결정보</h1>
+    <table class="type03">
+                <tr>
+                    <th scope="row">학번</th>
+                    <th scope="row">이름</th>
+                    <th scope="row">전공</th>
+                    <th scope="row" id="check">출결</th>
+                </tr>
+            <% for(var user of stud_info){ %>
+                <tr>
+                    <td><%=user.stud_id%></td>
+                    <td><%=user.stud_name%></td>
+                    <td><%=user.stud_major%></td>
+                    <td><%=user.stud_atd%></td>
+                </tr>
+            <% } %>
+        </table>    
+</body>
+</html>
